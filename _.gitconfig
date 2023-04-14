@@ -8,8 +8,6 @@
 [push]
 	autoSetupRemote = true
 	default = current
-	autoSetupRemote = true
-	autoSetupRemote = true
 [pull]
 	rebase = false
 [core]
