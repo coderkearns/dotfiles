@@ -18,10 +18,8 @@ export light_cyan=$(tput setaf 14)
 export light_orange=$(tput setaf 15)
 
 # Prompt
+source "$(dirname "${BASH_SOURCE[0]}")/scripts/git-prompt.sh"
 export PS1='\[$bold\]\[$red\]\u\[$normal\] \[$bold\]\[$green\]\d \t\[$normal\] \[$yellow\]\W\[$normal\]\[$cyan\]$(__git_ps1 " (%s)")\[$normal\]\n\[$yellow\]\!\[$normal\] \[$bold\]\\$\[$normal\]'
-
-# GITHUB: VERY IMPORTANT
-export GH_TOKEN="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"
 
 # Used by some programs. The edit and browse commands also use these.
 export BROWSER=firefox
