@@ -22,5 +22,5 @@ source "$(dirname "${BASH_SOURCE[0]}")/scripts/git-prompt.sh"
 export PS1='\[$bold\]\[$red\]\u\[$normal\] \[$bold\]\[$green\]\d \t\[$normal\] \[$yellow\]\W\[$normal\]\[$cyan\]$(__git_ps1 " (%s)")\[$normal\]\n\[$yellow\]\!\[$normal\] \[$bold\]\\$\[$normal\]'
 
 # Used by some programs. The edit and browse commands also use these.
-export BROWSER=firefox
-export EDITOR=code
+export BROWSER="firefox"
+export EDITOR="code"
