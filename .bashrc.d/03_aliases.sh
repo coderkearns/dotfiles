@@ -49,7 +49,7 @@ create() {
 	fi
 	# if the template file doesn't exist in ~/Templates, exit
 	if [ ! -f ~/Templates/$template_file ]; then
-		echo "Template file ~/Templates/$template_file doesn't exist"argument
+		echo "Template file ~/Templates/$template_file doesn't exist"
 		return
 	fi
 
