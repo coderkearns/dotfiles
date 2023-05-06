@@ -98,29 +98,15 @@ alias browser="$BROWSER"
 
 # Git + Github
 alias gh-token="echo $GH_TOKEN | copy"
-repo() {
-    cp -r ~/Templates/repo $1
-    builtin cd $1
-    git init -b main
-
-    repo="$1"
-    date=$(date "+%Y-%m-%d")
-
-    for file in *.*; do
-      sed -i "s/{repo}/$repo/g" $file
-      sed -i "s/{date}/$date/g" $file
-    done
-
-    echo -e "Make initial changes, then run:\n\n  $ initial-commit\n"
-}
-alias initial-commit="gh-token;gh repo create; git add .;git commit -m \"initial commit\";git push"
+alias push="gh-token; git push"
 alias branch="git branch --show-current"
-function commit-multiline {
-	echo "Commit message:"
-	cat > /tmp/commit-message.txt
-	git commit -F /tmp/commit-message.txt
-}
 alias mit="license MIT"
+# Clone one of my repos easily
+# Usage: my <repo-name> [<destination>]
+function my {
+    gh-token
+    git clone https://github.com/$GH_USER/$1 $2
+}
 
 # Raspberry Pi
 alias pi="ssh raspi" # Check the ~/.ssh/config file the edit the host
