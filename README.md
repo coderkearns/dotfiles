@@ -14,11 +14,13 @@ You can always re-run the installation script to update to the newest version.
 
 ## Safe files
 
-Don't forget to re-add the files `safe` files:
+Some files are not uploaded, like for tokens that are meant to stay secret. They have templates in the `templates/` directory
+that are copied *if they don't already exist*. If any of these files already exists it will not be overridden with the default, so it is on the user to keep them up-to-date.
 
-- **.bashrc.d/01_safe_vars.sh**
+When a template is copied during the install script a message is given to notify you to fill out the file:
 
-```sh
-# Github
-export GH_TOKEN="<your_personal_access_token>"
 ```
+Copying template <file>. Edit it after installation as needed.
+```
+
+All safe files currently go in `~/.bashrc.d/`
