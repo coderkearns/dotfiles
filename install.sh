@@ -10,10 +10,10 @@ fi;
 cd "$(dirname "${BASH_SOURCE}")"
 
 # Ensure we are using the latest version
-git pull origin main
+git pull origin main --quiet
 
 # Copy files
-rsync --exclude ".git/" --exclude "README.md" --exclude "LICENSE" --exclude "templates/" --exclude "install.sh" -avh --no-perms . ~
+rsync --exclude ".git/" --exclude "README.md" --exclude "LICENSE" --exclude "templates/" --exclude "install.sh" -avh --no-perms --quiet . ~
 
 # move templates if they don't already exist
 for FILE in templates/*; do
@@ -26,7 +26,6 @@ for FILE in templates/*; do
     fi
 done
 
-# Reload .bashrc automatically
-source ~/.bash_profile
-
 echo "Dotfiles installed successfully!"
+echo "Restart your shell to load the changes."
+echo "    $ source ~/.bash_profile"
