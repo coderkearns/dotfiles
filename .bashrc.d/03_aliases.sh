@@ -11,7 +11,9 @@ alias tree="tree -CF" # Add characters (@, /, etc) to filenames, Colorize
 alias grep="grep --color=auto -i" # colorize, ignore case
 
 # Editing
-alias edit="$EDITOR"
+edit() {
+    $EDITOR "$@"
+}
 
 alias hg='history | grep'
 alias copy="xclip -selection clipboard"
@@ -94,10 +96,14 @@ extract() {
 }
 
 # Web Browser
-alias browser="$BROWSER"
+browser() {
+    $BROWSER $@
+}
 
 # Git + Github
-alias gh-token="echo $GH_TOKEN | copy"
+gh-token() {
+    echo $GH_TOKEN | copy
+}
 alias push="gh-token; git push"
 alias branch="git branch --show-current"
 alias mit="license MIT"
