@@ -101,7 +101,7 @@ browser() {
 }
 
 # Git + Github
-gh-token() {
+function gh-token {
     echo $GH_TOKEN | copy
 }
 alias push="gh-token; git push"
