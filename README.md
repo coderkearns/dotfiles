@@ -10,6 +10,8 @@ $ cd dotfiles
 $ ./install.sh
 ```
 
+You can always re-run the installation script to update to the newest version.
+
 ## Safe files
 
 Don't forget to re-add the files `safe` files:
