@@ -100,6 +100,11 @@ browser() {
     $BROWSER $@
 }
 
+# Move to projects directory
+projects() {
+    cd $PROJECTS
+}
+
 # Git + Github
 function gh-token {
     echo $GH_TOKEN | copy

@@ -19,7 +19,7 @@ export light_orange=$(tput setaf 15)
 
 # Prompt
 source "$(dirname "${BASH_SOURCE[0]}")/scripts/git-prompt.sh"
-export PS1='\[$bold\]\[$red\]\u@\h\[$normal\] \[$bold\]\[$green\]\d \t\[$normal\] \[$yellow\]\W\[$normal\]\[$cyan\]$(__git_ps1 " (%s)")\[$normal\]\n\[$yellow\]\!\[$normal\] \[$bold\]\\$\[$normal\] '
+export PS1='\[$bold\]\[$red\]\u@\h\[$normal\] \[$bold\]\[$green\]\d \t\[$normal\] \[$yellow\]\W\[$normal\]\[$cyan\]`__git_ps1 " (%s)"`\[$normal\]\n\[$yellow\]\!\[$normal\] \[$bold\]\\$\[$normal\] '
 
 # Github
 export GH_USER="coderkearns"
@@ -27,3 +27,4 @@ export GH_USER="coderkearns"
 # Used by some programs. The edit and browse commands also use these.
 export BROWSER="firefox"
 export EDITOR="code"
+export PROJECTS="$HOME/projects"

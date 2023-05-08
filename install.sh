@@ -13,7 +13,7 @@ cd "$(dirname "${BASH_SOURCE}")"
 git pull origin main --quiet
 
 # Copy files
-rsync --exclude ".git/" --exclude "README.md" --exclude "LICENSE" --exclude "templates/" --exclude "install.sh" -avh --no-perms --quiet . ~
+cp -rT dotfiles "$HOME"
 
 # move templates if they don't already exist
 for FILE in templates/*; do
