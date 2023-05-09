@@ -1,30 +1,30 @@
 # Colors
-export bold=$(tput bold)
-export normal=$(tput sgr0)
+export BOLD=$(tput bold)
+export RESET=$(tput sgr0)
 
-export red=$(tput setaf 1)
-export green=$(tput setaf 2)
-export yellow=$(tput setaf 3)
-export blue=$(tput setaf 4)
-export magenta=$(tput setaf 5)
-export cyan=$(tput setaf 6)
-export orange=$(tput setaf 7)
-export light_red=$(tput setaf 9)
-export light_green=$(tput setaf 10)
-export light_yellow=$(tput setaf 11)
-export light_blue=$(tput setaf 12)
-export light_magenta=$(tput setaf 13)
-export light_cyan=$(tput setaf 14)
-export light_orange=$(tput setaf 15)
+export RED=$(tput setaf 1)
+export GREEN=$(tput setaf 2)
+export YELLOW=$(tput setaf 3)
+export BLUE=$(tput setaf 4)
+export MAGENTA=$(tput setaf 5)
+export CYAN=$(tput setaf 6)
+export ORANGE=$(tput setaf 7)
+export LIGHT_RED=$(tput setaf 9)
+export LIGHT_GREEN=$(tput setaf 10)
+export LIGHT_YELLOW=$(tput setaf 11)
+export LIGHT_BLUE=$(tput setaf 12)
+export LIGHT_MAGENTA=$(tput setaf 13)
+export LIGHT_CYAN=$(tput setaf 14)
+export LIGHT_ORANGE=$(tput setaf 15)
 
 # Prompt
 source "$(dirname "${BASH_SOURCE[0]}")/scripts/git-prompt.sh"
-export PS1='\[$bold\]\[$red\]\u@\h\[$normal\] \[$bold\]\[$green\]\d \t\[$normal\] \[$yellow\]\W\[$normal\]\[$cyan\]`__git_ps1 " (%s)"`\[$normal\]\n\[$yellow\]\!\[$normal\] \[$bold\]\\$\[$normal\] '
+export PS1='\[$BOLD\]\[$RED\]\u@\h\[$RESET\] \[$BOLD\]\[$GREEN\]\d \t\[$RESET\] \[$YELLOW\]\W\[$RESET\]\[$CYAN\]`__git_ps1 " (%s)"`\[$RESET\]\n\[$YELLOW\]\!\[$RESET\] \[$BOLD\]\\$\[$RESET\] '
 
 # Github
 export GH_USER="coderkearns"
 
-# Used by some programs. The edit and browse commands also use these.
+# Used by some programs. The browse, edit, and projects commands also use these.
 export BROWSER="firefox"
 export EDITOR="code"
 export PROJECTS="$HOME/projects"
