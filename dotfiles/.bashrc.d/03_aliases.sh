@@ -31,7 +31,7 @@ alias grep="grep --color=auto -i" # colorize, ignore case
 function gh-token {
     # Copy my github token to the clipboard
 
-    echo $GH_TOKEN | copy
+    echo $GH_TOKEN | xclip -selection clipboard
 }
 
 function my {
@@ -47,7 +47,6 @@ alias branch="git branch --show-current"
 
 ### MISC ###
 alias hg='history | grep'
-alias copy="xclip -selection clipboard"
 alias ps="ps -t"
 alias ports="sudo lsof -i -P -n | grep LISTEN" # Shows open ports
 alias pi="ssh raspi" # Check the ~/.ssh/config file the edit the host
