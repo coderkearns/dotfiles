@@ -62,7 +62,7 @@ alias aliases-edit="edit $ALIASES_FILE"
 
 
 ### DATABASE ###
-alias psql="sudo -u postgres psql"
+alias psql-user="sudo -u postgres psql"
 
 
 ### FUN ###
