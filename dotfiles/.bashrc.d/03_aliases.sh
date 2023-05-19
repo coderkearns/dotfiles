@@ -61,6 +61,10 @@ alias aliases="cat $ALIASES_FILE"
 alias aliases-edit="edit $ALIASES_FILE"
 
 
+### DATABASE ###
+alias psql="sudo -u postgres psql"
+
+
 ### FUN ###
 alias typeit="pv -qL 200" # cat file | typeit
 alias starwars="telnet towel.blinkenlights.nl"
