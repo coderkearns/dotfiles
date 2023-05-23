@@ -45,3 +45,10 @@ source "$(dirname "${BASH_SOURCE[0]}")/scripts/git-prompt.sh" # add the __git_ps
 export GIT_PS1_SHOWDIRTYSTATE=1 # show unstaged changes as "*" and staged changes as "+"
 export GIT_PS1_SHOWUPSTREAM=1 # show unpushed changes as ">", unpulled changes as "<", diverged remote and local "<>", and same remote and local as "="
 export PS1='\[$BOLD\]\[$RED\]\u@\h\[$RESET\] \[$BOLD\]\[$GREEN\]\d \t\[$RESET\] \[$YELLOW\]\W\[$RESET\]\[$CYAN\]`__git_ps1 " (%s)"`\[$RESET\]\n\[$YELLOW\]\!\[$RESET\] \[$BOLD\]\\$\[$RESET\] '
+
+# Vars
+export PROJECTS="$HOME/projects"
+export EDITOR="code"
+export browser="firefox"
+
+export GH_USER="coderkearns"
