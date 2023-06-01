@@ -11,7 +11,6 @@ function projects {
     cd "$PROJECTS"
 }
 
-
 ### OVERLOADS AND SIMPLE OPTIONS ###
 
 # ls
@@ -31,7 +30,7 @@ alias grep="grep --color=auto -i" # colorize, ignore case
 function gh-token {
     # Copy my github token to the clipboard
 
-    echo $GH_TOKEN | xclip -selection clipboard
+    echo $GH_TOKEN | $COPY_CMD
 }
 
 function my {
@@ -149,4 +148,15 @@ function extract {
 	else
 		echo "'$1' is not a valid file"
 	fi
+}
+
+
+### COPIERS ###
+
+function copy-branch {
+  git branch --show-current | $COPY_CMD
+}
+
+function copy-path {
+  pwd | $COPY_CMD
 }

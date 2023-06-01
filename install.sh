@@ -26,6 +26,17 @@ for FILE in templates/*; do
     fi
 done
 
+# run installer scripts
+for FILE in scripts/*; do
+  echo "Running $FILE..."
+  source "$FILE"
+done
+
 echo "Dotfiles installed successfully!"
 echo "Restart your shell to load the changes."
 echo "    $ source ~/.bash_profile"
+
+# Copy the source command if possible
+if [ -z "$COPY_CMD" ]; then
+  echo "source ~/.bash_profile" | $COPY_CMD;
+fi
