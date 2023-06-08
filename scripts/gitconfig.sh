@@ -11,6 +11,8 @@ git config --global push.default current
 
 git config --global pull.rebase false
 
+git config --global submodule.recurse true
+
 function gitconfig-alias {
   git config --global alias.$1 "$2"
 }
