@@ -22,7 +22,7 @@ function gitconfig-alias {
 }
 
 gitconfig-function ignore "curl -sL https://www.toptal.com/developers/gitignore/api/$@"
-gitconfig-function superpull "git reset --hard origin/\$(git branch --show-current)"
+gitconfig-function superpull "git clean -fd; git reset --hard origin/\$(git branch --show-current)"
 gitconfig-alias undo "reset --soft HEAD~1"
 gitconfig-alias ouch "reset --hard HEAD~1"
 gitconfig-alias typo "commit --amend"
