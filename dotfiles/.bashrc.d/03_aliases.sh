@@ -152,7 +152,9 @@ function extract {
 
 
 ### COPIERS ###
-
+function copy {
+    $COPY_CMD $@
+}
 function copy-branch {
   git branch --show-current | $COPY_CMD
 }
