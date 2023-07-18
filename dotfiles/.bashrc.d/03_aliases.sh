@@ -43,6 +43,11 @@ function my {
 
 alias push="gh-token; git push"
 alias branch="git branch --show-current"
+alias find-branch="git branches | grep"
+
+function checkout {
+  git checkout $(find-branch $@)
+}
 
 ### MISC ###
 alias hg='history | grep'
